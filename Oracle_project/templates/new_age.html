@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>ToDo for Students</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>ToDo list for Students</h1>
+
+    <h2>Update user age</h2>
+    <form method="POST" action="/new_age">
+	    {{ form.csrf_token }}
+	    {{ form.user_id.label }} {{ form.user_id }}
+	    {{ form.new_age.label }} {{ form.new_age }}
+	    <input type="submit" value="update">
+	</form>
+
+  </body>
+</html>

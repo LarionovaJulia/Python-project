@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>ToDo for Students</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    
+    <h1>Hello!</h1>
+
+    <h2>Good to see you here</h2>
+    <h3>Now you successfully signed up</h3>
+    <a href="{{ url_for('show_lists') }} ">LET'S START DOING SMTH</a>
+
+  </body>
+</html>
+

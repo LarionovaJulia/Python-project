@@ -1,0 +1,19 @@
+<title>Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+<h1 class="page-title">Dashboard</h1>
+
+<main class="dashboard">
+
+  <section>
+    <h2>Users Tasks</h2>
+    <p>{{ tasks_by_checked_chart | safe }}</p>
+    </section>
+    </ul>
+
+  <section>
+    <h2>Users Lists</h2>
+    <p>{{ lists_by_user_chart | safe }}</p>
+  </section>
+</main>
